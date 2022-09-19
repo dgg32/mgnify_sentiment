@@ -29,9 +29,9 @@ def work():
             filename = url.split("/")[-2] + ".json"
             url += "/ssu"
 
-            #print (url)
+            print (url)
             result = func_ebi_get_attr_and_url.get_all_taxonomy(url)
-            #print (result)
+            print (result)
 
             path = os.path.join(dest, filename)
 
@@ -66,7 +66,7 @@ results = func_ebi_get_attr_and_url.get_attribute_and_relationships_url(url, ["a
 for r in results:
     anaylsis_url = r["analyses"]
     taxonomies = func_ebi_get_attr_and_url.get_attribute_and_relationships_url(anaylsis_url, ["taxonomy"])
-
+    print (taxonomies)
     for t in taxonomies:
         if "taxonomy" in t:
             in_queue.put([t["taxonomy"], output_folder])
