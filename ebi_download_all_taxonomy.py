@@ -65,10 +65,12 @@ results = func_ebi_get_attr_and_url.get_attribute_and_relationships_url(url, ["a
 
 for r in results:
     anaylsis_url = r["analyses"]
+    print (anaylsis_url)
     taxonomies = func_ebi_get_attr_and_url.get_attribute_and_relationships_url(anaylsis_url, ["taxonomy"])
     print (taxonomies)
     for t in taxonomies:
         if "taxonomy" in t:
+            print (t)
             in_queue.put([t["taxonomy"], output_folder])
 
 in_queue.join()

@@ -26,7 +26,8 @@ def get_attribute_and_relationships_url(url, keywords):
         if isinstance(data, list):
 
             for odata in data:
-                #print (sample)
+                
+                print (odata)
 
                 #print (sample)
 
@@ -68,7 +69,8 @@ def get_attribute_and_relationships_url(url, keywords):
             #break
         else:
             break
-
+    
+    print (results)
 
     return results
 
