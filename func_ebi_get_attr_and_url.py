@@ -70,7 +70,7 @@ def get_attribute_and_relationships_url(url, keywords):
         else:
             break
     
-    print (results)
+    #print (results)
 
     return results
 
