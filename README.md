@@ -19,12 +19,12 @@ SHAP
 # Usage
 1. First dowload taxonomic profiles from MGnify with ebi_donwload_all_taxonomy.py:
 ```console
-python ebi_donwload_all_taxonomy.py [habitat_string] [json_output_folder]
+python ebi_download_all_taxonomy.py [habitat_string] [json_output_folder]
 ```
 
 For example, to download the taxonomic profiles for soils:
 ```console
-python ebi_donwload_all_taxonomy.py root:Environmental:Terrestrial:Soil /home/sih13/Downloads/sentiment/
+python ebi_download_all_taxonomy.py root:Environmental:Terrestrial:Soil /home/sih13/Downloads/sentiment/
 ```
 
 2. Convert the json files into text files
